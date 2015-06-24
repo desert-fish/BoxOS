@@ -1,4 +1,4 @@
-#include "stm32f10x.h"
+﻿#include "stm32f10x.h"
 #include "common_delay.h"
 #include "common_interrupt.h"
 #include "common_usart.h"
@@ -19,7 +19,7 @@
 int proc1(void){
 	while(1){
 		NORMAL_SHOW(1);
-		MT_Wait(10000);
+		MT_Wait(700000);
 	}
 }
 void proc2(void){
