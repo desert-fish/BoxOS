@@ -8,23 +8,19 @@
 
 #include "led_driver.h"
 
-//-------------------------------------
-//一些硬件驱动的PID 号码，这些号码固定不变
-#define LED1_PID 2	//红灯
-#define LED2_PID 3	//绿灯
-//-------------------------------------
-#define ERROR_SHOW(n)  MT_CallService(LED1_PID,n,0)
-#define NORMAL_SHOW(n) MT_CallService(LED2_PID,n,0)
+/* some process ID for led driver ,you can change IO in led.c */
+#define LED1_PID 2	//Red LED
+#define LED2_PID 3	//Green LED
 
 int proc1(void){
 	while(1){
-		NORMAL_SHOW(1);
+		MT_CallService(LED1_PID,1,0);
 		MT_Wait(700000);
 	}
 }
 void proc2(void){
 	while(1){
-		ERROR_SHOW(1);
+		MT_CallService(LED2_PID,1,0);
 		MT_Wait(500000);
 	}
 }
