@@ -3,7 +3,6 @@
 
 //功能：等待LED驱动服务进程
 void	Led1_Driver(u32	argc,u32	argv){
-	u32	i=10000;
 	GPIO_InitTypeDef	GPIOxInitStruct;
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC,ENABLE);
 	GPIOxInitStruct.GPIO_Pin	=GPIO_Pin_0;

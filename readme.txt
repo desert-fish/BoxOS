@@ -1,2 +1,3 @@
 ﻿2015/6/25
 现在已经发布了生成MDK工程的基本程序文件，可以实现基本的功能
+stm32f103zet6 有512K的Flash ，需要定义STM32F10X_HD,USE_STDPERIPH_DEVICE
